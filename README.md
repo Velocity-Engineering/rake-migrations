@@ -32,11 +32,11 @@ Finally, add the following file in your `config/initializers` folder to provide 
 ```ruby
 # rake_migrations.rb
 RakeMigrations.configure do |config|
-  config.database_name = DATABASE_CONFIG[Rails.env]['database']
-  config.hostname = DATABASE_CONFIG[Rails.env]['host']
-  config.username = DATABASE_CONFIG[Rails.env]['username']
-  config.password = DATABASE_CONFIG[Rails.env]['password']
-end 
+  config.database_name = 'neobank'
+  config.hostname = ENV['DATABASE_HOST']
+  config.username = ENV['DATABASE_USERNAME']
+  config.password = ENV['DATABASE_PASSWORD']
+end
 ```
 
 ## Usage

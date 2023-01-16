@@ -6,7 +6,7 @@ This gem helps you and your team members keep track of which rake tasks are yet 
 For a more verbose explanation please refer to [this blog post](http://eyaleizenberg.blogspot.com/2014/08/how-to-keep-track-of-rails-rake-tasks.html).
 
 ## Requirements
-At the moment I have only tested this on Rails 3.2.X, 4.2.x and 5.1.x  running postgresql on Mac OS X.
+At the moment I have only tested this on Rails 5.X.X, 6.X.x and 7.X.X  running postgresql on Mac OS X.
 If you can help by testing this on different versions, databases and platforms, let me know.
 
 ## Installation

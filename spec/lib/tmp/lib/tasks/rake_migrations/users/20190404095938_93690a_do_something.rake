@@ -14,7 +14,7 @@ namespace :users do
     end
 
     # DO NOT REMOVE THIS PART. MARKS THE RAKE AS COMPLETE IN THE DATABASE
-    RakeMigration.mark_complete(__FILE__)
+    RakeMigration.mark_complete(__FILE__, namespace, task_name, created_by, duration )
 
   end
 end

@@ -6,7 +6,7 @@ class CreateRakeMigrationsTable < ActiveRecord::Migration<%= @rails_major_minor_
       t.string :task_name
       t.string :created_by
       t.datetime :created_at
-      t.integer :duration
+      t.float :duration
     end
   end
 

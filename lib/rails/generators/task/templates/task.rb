@@ -9,14 +9,14 @@ namespace :<%= file_name %> do
 <% actions.each do |action| -%>
   desc "TODO"
   task <%= action %>: [:environment] do
-    ActiveRecord::Base.transaction do
-      # ADD YOUR CODE HERE
+    time = Benchmark.realtime {
+      ActiveRecord::Base.transaction do
+        # ADD YOUR CODE HERE
 
-    end
-
+      end
+    }
     # DO NOT REMOVE THIS PART. MARKS THE RAKE AS COMPLETE IN THE DATABASE
-    RakeMigration.mark_complete(__FILE__, namespace, task_name, created_by, duration)
-
+    RakeMigration.mark_complete(__FILE__, 'namespace', 'task_name', 'System', time)
   end
 <% end -%>
 end

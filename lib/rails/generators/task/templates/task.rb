@@ -16,7 +16,8 @@ namespace :<%= file_name %> do
       end
     }
     # DO NOT REMOVE THIS PART. MARKS THE RAKE AS COMPLETE IN THE DATABASE
-    RakeMigration.mark_complete(__FILE__, 'namespace', 'task_name', 'System', time)
+    top_level_task = Rake.application.top_level_tasks[0]
+    RakeMigration.mark_complete(__FILE__, top_level_task.split(':')[0], top_level_task.split(':')[1], 'System', time)
   end
 <% end -%>
 end
